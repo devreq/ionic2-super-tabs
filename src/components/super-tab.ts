@@ -42,6 +42,9 @@ export class SuperTab extends NavControllerBase implements OnInit, AfterViewInit
   @Input()
   title: string;
 
+  @Input()
+  subtitle: string;
+
   // TODO find less hacky approach
   // needed to make Ionic Framework think this is a tabs component... needed for Deeplinking
   get tabTitle() {

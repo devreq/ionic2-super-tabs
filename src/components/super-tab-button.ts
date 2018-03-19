@@ -12,7 +12,8 @@ import {
   selector: 'super-tab-button',
   template: `
     <ion-icon *ngIf="!!icon" [name]="icon" [color]="color"></ion-icon>
-    <span class="title" *ngIf="!!title" ion-text [color]="color">{{ title }}</span>
+    <span class="title" style="margin-top: 10px;margin-bottom: -11px;" *ngIf="!!title" ion-text [color]="color">{{ title }}</span>
+    <p class="subtitle" *ngIf="!!subtitle" ion-text [color]="color">{{ subtitle }}</p>
     <ion-badge mode="md" [color]="badgeColor">{{ badge }}</ion-badge>
     <div class="button-effect"></div>
   `,
@@ -35,6 +36,9 @@ export class SuperTabButton {
 
   @Input()
   title: string;
+
+  @Input()
+  subtitle: string;
 
   @Input()
   icon: string;
